@@ -24,7 +24,7 @@ interface Observer {
 
 > 요즘들어서 계속 사용하고 있는 Reactive Programming (Rx) 의 경우는 Observer Pattern과 Functional Programming을 복합적으로 사용하고 있는 실 예제라고 볼 수 있지 않을까?
 
-![IMG_23B57A0CE9E1-1](/Users/hyunjae/Dropbox/DesignPattern/Observer/Observer_class_diagram.png)
+![diagram](https://github.com/kimhun456/DesignPattern/blob/master/Observer/Observer_class_diagram.png?raw=true)
 
 ---
 
@@ -32,7 +32,7 @@ interface Observer {
 
  두 객체가 느슨하게 결합되어 있다는 것은, **그 둘이 상호작용을 하지만 서로에 대해 잘 모르고 겉으로 드러난 부분만 알고 있다는 것을 의미**한다. 여기서 겉으로 들어난 부분이란 interface라고 할 수 있다. 특히, Observer 패턴에서는 느슨하게 결합된 객체 디자인을 제공하게 되는데 위에 있는 이미지를 살펴보면 확인 할 수 있다. Subject의 경우 Observer를 구현한 어떤 객체던지 subscribe, unsubscribe, notify가 가능하기 때문에 Observer interface를 구현한 새로운 클래스를 생성해도 Subject의 코드를 수정하는 동작이 필요하지 않다. 또한 만약 Subject를 구현한 객체에 어떤 기능이 추가되어야 된다고 생각해 보자, 그 때 우리는 Subject에서 overriding된 메소드를 그대로 두고 새로운 method를 추가 or 앞에서 사용한 composition을 사용하여 새로운 기능을 추가할 수 있다.
 
-### 
+
 
 ## 디자인 원칙 
 
@@ -42,9 +42,9 @@ interface Observer {
 
 
 
-### 브레인 파워 -> Subject에서 Observer로 notify할 때 value가 늘어나거나 줄거나 하면서 매번 바뀌게 된다면???
+#### 브레인 파워 -> Subject에서 Observer로 notify할 때 value가 늘어나거나 줄거나 하면서 매번 바뀌게 된다면???
 
-이 경우 나는 Data 클래스를 사용하면 좋을 것 같다. Data클래스의 구조는 key-value가 있는 Map구조로 사용하고 LinkedList HashMap과 같은 구조로 하면 좋을 것 같다. 아니면 item이 충돌 할때 Strategy를 overwriting or merging으로 하여서 그냥 HashMap or LinkedList HashMap을 사용하면 좋은 Data 클래스로 쓰일 수 있을 것 같다.
+이 경우 Data 클래스를 사용하면 좋을 것 같다. Data클래스의 구조는 key-value가 있는 Map구조로 사용하고 LinkedList HashMap과 같은 구조로 하면 좋을 것 같다. 더해서, item이 충돌 할때 Strategy를 overwriting or merging으로 하여서 그냥 HashMap or LinkedList HashMap을 사용하면 좋은 Data 클래스로 쓰일 수 있을 것 같다.
 
 ```java
 

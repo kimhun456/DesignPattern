@@ -37,7 +37,7 @@ Animanl animal;
 animal.makeSound();
 ```
 
-![개ㄱ체지향](/Users/hyunjae/Dropbox/DesignPattern/Introduction/IMG_4BFD725C8231-1.png)
+![Strategy](https://raw.githubusercontent.com/kimhun456/DesignPattern/master/Introduction/IMG_4BFD725C8231-1.png)
 
 **궁금한 한 부분.**
 
