@@ -20,11 +20,9 @@ interface Observer {
 
 ```
 
-
-
 > 요즘들어서 계속 사용하고 있는 Reactive Programming (Rx) 의 경우는 Observer Pattern과 Functional Programming을 복합적으로 사용하고 있는 실 예제라고 볼 수 있지 않을까?
 
-![diagram](https://github.com/kimhun456/DesignPattern/blob/master/Observer/Observer_class_diagram.png?raw=true)
+![diagram](Observer_class_diagram.png)
 
 ---
 
@@ -70,7 +68,7 @@ enum ConflictStrategy {
 
 Java에서 Observer 패턴을 구현한 Observerable과 Observer는 약간의 차이가 있다. 첫번째로 Java의 Observable에서 setChanged()를 통하여 **언제** Observerble에게 notify할 건지를 조절 할 수 있다. 이러한 유연성을 토대로 우리가 원하는 때에 Observer들에게 notify()가 가능하다.
 
-
+---
 
 ### 디자인 도구 상자
 
