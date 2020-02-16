@@ -1,4 +1,4 @@
-## Introduction - Strategy Pattern
+# Introduction - Strategy Pattern
 
 
 
