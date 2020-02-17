@@ -101,6 +101,20 @@ JVM에 Class 파일들을 로드하는 녀석으로서 JRE를 구성하고 있�
 
 즉 여기서 말했던 NameSpace의 경우 Java에서 패키지 관리를 통하여 java.lang.util.* 혹은 javax.swing.sql.* 이런식으로 이 안에서 같은 클래스 명이 들어가도 서로가 구별되기 위하여 관리되는 범위를 나타낸다고 볼 수 있다.
 
+
+
+### Dagger style
+
+```java
+@Singleton
+@Component(Modules ={MediaModule.class})
+public interface MediaComponent {
+    MediaController mediaController();
+}
+```
+
+
+
 ---
 
 ### 디자인 도구 상자
